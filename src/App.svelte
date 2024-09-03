@@ -15,7 +15,7 @@
   }
 </script>
 
-<main class="flex items-center justify-center w-full h-screen bg-cream px-4 py-6">
+<main class="flex items-center justify-center w-full min-h-screen h-fit bg-cream px-4 py-6">
   <div class="flex flex-col w-full sm:flex-row bg-white overflow-clip rounded-xl sm:w-[600px] font-montserrat">
     <div class="sm:flex-none sm:w-1/2">
       <picture>
