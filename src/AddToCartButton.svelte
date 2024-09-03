@@ -15,7 +15,7 @@
     <img src={icon} alt={iconAlt} loading="lazy" class="size-4" />
     <img src="/icon-cart.svg" alt="Icon of a cart" loading="lazy" />
   </button>
-  <button class="absolute w-full h-full bg-dark-cyan" on:click={handler}>
+  <button class="absolute w-full h-full bg-dark-cyan text-sm font-bold" on:click={handler}>
     {label}
   </button>
 </div>

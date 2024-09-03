@@ -18,16 +18,16 @@
 <main class="flex items-center justify-center w-full min-h-screen h-fit bg-cream px-4 py-6">
   <div class="flex flex-col w-full sm:flex-row bg-white overflow-clip rounded-xl sm:w-[600px] font-montserrat">
     <div class="sm:flex-none sm:w-1/2">
-      <picture>
+      <picture class="object-contain">
         <source srcset="/perfume-desktop.jpg" media="(min-width: 640px)" />
-        <img src="/perfume-mobile.jpg" alt="Perfume" class="h-full" />
+        <img src="/perfume-mobile.jpg" alt="Perfume" class="h-full" loading="lazy" />
       </picture>
     </div>
 
     <div class="sm:flex-none sm:w-1/2 p-8 flex flex-col gap-6">
       <p class="uppercase text-sm tracking-[0.3125rem] text-dark-grayish-blue">Perfume</p>
       <h1 class="leading-none font-fraunces text-double font-bold text-very-dark-blue">Gabrielle Essence Eau De Parfum</h1>
-      <h2 class="text-dark-grayish-blue">
+      <h2 class="text-dark-grayish-blue text-sm">
         A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
       </h2>
       <div class="flex flex-row gap-5 items-center">
