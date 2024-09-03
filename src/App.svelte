@@ -1,9 +1,17 @@
 <script lang="ts">
+  import AddToCartButton from "./AddToCartButton.svelte";
   import TextModal from "./TextModal.svelte";
   let message: string | undefined = undefined;
+  let added: boolean = false;
 
-  function applyMessage() {
-    message = "Item added to cart! Thank you for purchasing this product. View more products at Frontend Mentor.";
+  function handler() {
+    if (added) {
+      message = "Item removed from cart! We're sorry we couldn't fulfill your needs. View more products at Frontend Mentor.";
+      added = false;
+    } else {
+      message = "Item added to cart! Thank you for purchasing this product. View more products at Frontend Mentor.";
+      added = true;
+    }
   }
 </script>
 
@@ -26,16 +34,7 @@
         <span class="text-double text-dark-cyan font-fraunces font-bold leading-none">$149.99</span>
         <span class="line-through text-sm text-dark-grayish-blue">$169.99</span>
       </div>
-      <div class="group relative h-12 w-full rounded-lg overflow-clip text-white">
-        <button
-          class="absolute h-full bg-darker-cyan w-0 group-hover:w-full z-[1] duration-200 flex items-center justify-center flex-row gap-3"
-          on:click={applyMessage}
-        >
-          <img src="/icon-plus.svg" alt="Plus icon" loading="lazy" class="size-4" />
-          <img src="/icon-cart.svg" alt="Icon of a cart" loading="lazy" />
-        </button>
-        <button class="absolute bg-dark-cyan w-full h-full" on:click={applyMessage}>Add to Cart</button>
-      </div>
+      <AddToCartButton {handler} bind:added />
     </div>
   </div>
   <TextModal bind:message />

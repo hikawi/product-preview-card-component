@@ -22,6 +22,16 @@ export default {
       backgroundSize: {
         "double-x": "200% 100%",
       },
+      keyframes: {
+        pop: {
+          "0%": { transform: "scale(0.5)" },
+          "50%": { transform: "scale(1.2)" },
+          "100%": { transform: "scale(1)" },
+        },
+      },
+      animation: {
+        pop: "pop 0.3s ease-out",
+      },
     },
   },
   plugins: [],
